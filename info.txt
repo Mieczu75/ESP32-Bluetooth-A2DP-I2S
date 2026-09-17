@@ -1,0 +1,33 @@
+MAESTRO BT – ESP32-WROOM-32U
+=============================
+
+Krótki opis programu
+--------------------
+Program odbiera cyfrowy dźwięk PCM z urządzenia Maestro przez I2S i przesyła go bezprzewodowo do głośnika Bluetooth jako źródło A2DP.
+
+Najważniejsze funkcje:
+- ESP32-WROOM-32U pracuje jako Bluetooth Classic / A2DP Source.
+- Odbiera I2S jako SLAVE, 16-bit, stereo.
+- Automatycznie rozpoznaje częstotliwość wejściową 44,1 kHz lub 48 kHz.
+- Dla 44,1 kHz przekazuje dźwięk bez zmiany częstotliwości.
+- Dla 48 kHz wykonuje automatyczny resampling 48 kHz -> 44,1 kHz.
+- Wyjście Bluetooth A2DP pracuje z częstotliwością 44,1 kHz.
+- Przy zmianie 44,1/48 kHz program automatycznie przełącza tryb pracy i czyści stary bufor PCM.
+- Odtwarza jednorazowy dźwięk powitalny po uruchomieniu połączenia audio.
+- Najpierw próbuje połączyć się z ostatnio używanym głośnikiem Bluetooth, a następnie może przejść do automatycznego parowania.
+- Monitor portu szeregowego pokazuje wykrytą częstotliwość, stan bufora, DROP i UNDERRUN.
+
+Połączenie I2S
+--------------
+Maestro ESP32-S3 GPIO44 BCLK  -> ESP32-WROOM GPIO26
+Maestro ESP32-S3 GPIO16 LRCK  -> ESP32-WROOM GPIO25
+Maestro ESP32-S3 GPIO43 DATA  -> ESP32-WROOM GPIO22
+Maestro GND                    -> ESP32-WROOM GND
+
+Format audio
+------------
+Wejście I2S : AUTO 44,1 kHz / 48 kHz, 16-bit, stereo
+Wyjście A2DP: 44,1 kHz, 16-bit, stereo
+
+Wersja programu:
+MAESTRO BT / I2S AUTO 44.1/48K -> A2DP V6
