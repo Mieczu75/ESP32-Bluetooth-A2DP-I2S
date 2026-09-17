@@ -17,9 +17,9 @@ static constexpr uint32_t WELCOME_SAMPLE_RATE = 11025;
 // ============================================================
 // I2S RX Z MAESTRO ESP32-S3
 //
-// Maestro GPIO44 BCLK  -> WROOM GPIO26
+// Maestro GPIO06 BCLK  -> WROOM GPIO26
 // Maestro GPIO16 LRCK  -> WROOM GPIO25
-// Maestro GPIO43 DATA  -> WROOM GPIO22
+// Maestro GPIO15 DATA  -> WROOM GPIO22
 // Maestro GND          -> WROOM GND
 //
 // WROOM pracuje jako I2S SLAVE / RX.
