@@ -18,9 +18,9 @@ Nadajnik Bluetooth A2DP oparty na ESP32-WROOM-32U. Program odbiera dźwięk PCM 
 
 | Maestro ESP32-S3 | ESP32-WROOM-32U | Funkcja |
 |---|---|---|
-| GPIO44 | GPIO26 | BCLK |
+| GPIO06 | GPIO26 | BCLK |
 | GPIO16 | GPIO25 | LRCK / WS |
-| GPIO43 | GPIO22 | DATA |
+| GPIO15 | GPIO22 | DATA |
 | GND | GND | masa |
 
 ## Format audio
