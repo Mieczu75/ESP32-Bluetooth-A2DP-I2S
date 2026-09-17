@@ -19,9 +19,9 @@ Najważniejsze funkcje:
 
 Połączenie I2S
 --------------
-Maestro ESP32-S3 GPIO44 BCLK  -> ESP32-WROOM GPIO26
+Maestro ESP32-S3 GPIO06 BCLK  -> ESP32-WROOM GPIO26
 Maestro ESP32-S3 GPIO16 LRCK  -> ESP32-WROOM GPIO25
-Maestro ESP32-S3 GPIO43 DATA  -> ESP32-WROOM GPIO22
+Maestro ESP32-S3 GPIO15 DATA  -> ESP32-WROOM GPIO22
 Maestro GND                    -> ESP32-WROOM GND
 
 Format audio
