@@ -2,17 +2,19 @@
 
 Nadajnik Bluetooth A2DP oparty na ESP32-WROOM-32U. Program odbiera dźwięk PCM z urządzenia Maestro przez I2S i przesyła go do głośnika Bluetooth.
 
-## Najważniejsze funkcje
+Najważniejsze funkcje:
 
-- ESP32-WROOM-32U jako Bluetooth Classic / A2DP Source
-- I2S RX w trybie SLAVE, 16-bit stereo
-- automatyczne rozpoznawanie wejścia 44,1 kHz lub 48 kHz
-- 44,1 kHz: przekazywanie PCM bez resamplingu
-- 48 kHz: automatyczny resampling 48 kHz → 44,1 kHz
-- automatyczne czyszczenie bufora przy zmianie częstotliwości
-- dźwięk powitalny po zestawieniu połączenia audio
-- ponowne łączenie z ostatnim głośnikiem oraz automatyczne parowanie
-- diagnostyka przez Serial: częstotliwość, bufor, DROP i UNDERRUN
+ESP32-WROOM-32U jako nadajnik Bluetooth Classic A2DP,
+wejście audio I2S stereo 16-bit,
+automatyczne wykrywanie 44,1/48 kHz,
+konwersja 48 kHz → 44,1 kHz,
+pamięć 3 ostatnich odbiorników Bluetooth,
+priorytet ostatnio używanego urządzenia,
+automatyczny reconnect po utracie połączenia,
+automatyczne wyszukiwanie nowego odbiornika,
+filtrowanie urządzeń Bluetooth Audio/Video,
+pełna regeneracja stosu Bluetooth po utracie aktywnego połączenia,
+zachowanie bonding, NVS i listy zapamiętanych urządzeń.
 
 ## Połączenie I2S
 
@@ -35,4 +37,5 @@ Nadajnik Bluetooth A2DP oparty na ESP32-WROOM-32U. Program odbiera dźwięk PCM 
 
 ## Wersja
 
-`MAESTRO BT / I2S AUTO 44.1/48K -> A2DP V6`
+MAESTRO BT V7.4
+MRU-3 FULL BT CORE RESTART
